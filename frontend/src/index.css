@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #121212;
+  color: #f4f4f4;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #121212;
+  font-family: 'Inter', -apple-system, sans-serif;
+  user-select: none;
+}
+
+/* Custom scrollbars for a sleek pro UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #161616;
+}
+::-webkit-scrollbar-thumb {
+  background: #393939;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+/* Custom Monospace class for OpenQASM */
+.font-mono-qasm {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Custom animations and styling helpers */
+@keyframes pulse-gentle {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.pulse-gentle {
+  animation: pulse-gentle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* React Flow styling fixes for our composer grid */
+.react-flow__pane {
+  background-color: #262626;
+}
+
+.react-flow__renderer {
+  outline: none !important;
+}
+
+.drag-handle-gate {
+  cursor: grab;
+}
+.drag-handle-gate:active {
+  cursor: grabbing;
+}

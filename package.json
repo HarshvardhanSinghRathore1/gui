@@ -1,0 +1,14 @@
+{
+  "name": "quantum-composer-studio",
+  "version": "1.0.0",
+  "description": "IBM Quantum Composer inspired Quantum Circuit Studio Workspace",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm start --prefix backend",
+    "start": "npx concurrently --kill-others \"npm run dev:frontend\" \"npm run dev:backend\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
